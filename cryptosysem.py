@@ -106,7 +106,7 @@ def decrypt(encrypted_message, key):
 plaintext = "Our company is facing financial instability due to mismanagement by senior executives. Over the past year, they’ve diverted funds from key projects into personal accounts, leaving us unable to meet operational costs. R&D has been underfunded, delaying critical product launches. Additionally, safety violations have been covered up to avoid regulatory scrutiny, which could result in major fines. We need to act immediately to prevent this from becoming public, as it could severely damage our reputation and future."
 
 key = "SABROSA"
-key = 'T' + key
+key = 'T' + key #Fixes edge case of leading zero since T maps to 1 in morse code
 encrypted_message = encrypt(plaintext, key)
 decrypted_message = decrypt(encrypted_message, key)
 
